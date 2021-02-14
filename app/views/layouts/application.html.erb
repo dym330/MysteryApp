@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>App</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>App</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <div class="header-items">
+      <div class="header-logo">
+        <%= link_to "謎解きSNS", '#', class:"no-underline　text-white" %>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><%= link_to "Home",   '#', class:"no-underline text-white" %></li>
+          <li><%= link_to "Help",   '#', class:"no-underline text-white" %></li>
+          <li><%= link_to "Log in", '#', class:"no-underline text-white" %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
 </html>

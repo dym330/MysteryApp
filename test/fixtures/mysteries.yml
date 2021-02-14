@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mystery_img: MyString
+  genre: MyString
+  answer: MyString
+  answer_format: MyString
+
+two:
+  mystery_img: MyString
+  genre: MyString
+  answer: MyString
+  answer_format: MyString

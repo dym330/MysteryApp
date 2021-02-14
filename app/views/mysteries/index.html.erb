@@ -1,0 +1,15 @@
+<h1>Hello World</h1>
+
+
+<%= form_with model: @mystery, local:true do |f| %>
+
+<%= f.label :mystery_img %>
+<%= f.file_field :mystery_img %>
+
+<%= f.submit %>
+
+<% end %>
+
+<% @mysteries.each do |mystery|%>
+  <%= image_tag mystery.mystery_img.url %>
+<% end %>
