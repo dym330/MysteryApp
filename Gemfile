@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'carrierwave'
 gem 'rexml'
 gem 'bcrypt'
+gem 'rails-i18n'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'

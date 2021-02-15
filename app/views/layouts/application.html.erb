@@ -26,7 +26,12 @@
     </div>
   </header>
   <main>
-    <%= yield %>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
   </main>
   <footer>
 
