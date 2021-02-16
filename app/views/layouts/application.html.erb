@@ -20,7 +20,11 @@
         <ul class="nav-list">
           <li><%= link_to "Home",   '#', class:"no-underline text-white" %></li>
           <li><%= link_to "Help",   '#', class:"no-underline text-white" %></li>
-          <li><%= link_to "Log in", '#', class:"no-underline text-white" %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Log out", logout_path, class:"no-underline text-white", method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", login_path, class:"no-underline text-white" %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
@@ -28,7 +32,7 @@
   <main>
     <div class="container">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= yield %>
     </div>
