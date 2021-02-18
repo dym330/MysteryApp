@@ -14,13 +14,14 @@
   <header>
     <div class="header-items">
       <div class="header-logo">
-        <%= link_to "謎解きSNS", '#', class:"no-underline　text-white" %>
+        <%= link_to "謎解きSNS", root_url, class:"no-underline　text-white" %>
       </div>
       <nav>
         <ul class="nav-list">
           <li><%= link_to "Home",   '#', class:"no-underline text-white" %></li>
           <li><%= link_to "Help",   '#', class:"no-underline text-white" %></li>
           <% if logged_in? %>
+            <li><%= link_to current_user.name, user_path(current_user) %></li>
             <li><%= link_to "Log out", logout_path, class:"no-underline text-white", method: :delete %></li>
           <% else %>
             <li><%= link_to "Log in", login_path, class:"no-underline text-white" %></li>
